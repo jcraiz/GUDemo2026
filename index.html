@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Site made with Mobirise Website Builder v6.0.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo2.0-v2-101x84.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/gallery/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=XvbJ8p"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=XvbJ8p" type="text/css">
+
+  
+  
+  
+<meta name="theme-color" content="#2b7a69">
+<link rel="manifest" href="manifest.json">
+<script src="sw-connect.js"></script>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-2048x2732.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="GULevel1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Custom CSS for background video -->
+  <style>
+    /* Background video container - FIXED */
+    #header18-1k {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+      min-height: 600px;
+      background: #000; /* Black background as fallback */
+    }
+
+    /* Video container */
+    #header18-1k .video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Video styling - FIXED */
+    #header18-1k video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Overlay positioning - FIXED */
+    #header18-1k .mbr-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      opacity: 0.3; /* Reduced to see video better */
+      background-color: rgb(0, 0, 0);
+    }
+
+    /* Ensure content stays above video - FIXED */
+    #header18-1k .container-fluid {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Center content vertically */
+    #header18-1k .row {
+      width: 100%;
+    }
+    
+    /* Make sure content is visible */
+    #header18-1k .mbr-white {
+      color: white !important;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+    
+    /* Video debugging - remove if not needed */
+    #header18-1k video {
+      /* border: 2px solid red; /* Uncomment to see video boundaries */
+    }
+  </style>
+
+  <!-- Modal Styles (solo para el primer elemento de Extras) -->
+  <style>
+    /* Modal Styles */
+    .content-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 10000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .modal-content-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      animation: modalFadeIn 0.3s ease;
+    }
+    
+    .modal-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .modal-close-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 10001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .modal-close-btn:hover {
+      background: #c82333;
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    }
+    
+    .modal-close-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .modal-close-btn::after {
+      content: 'Close';
+      position: absolute;
+      left: 70px;
+      white-space: nowrap;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    
+    .modal-close-btn:hover::after {
+      opacity: 1;
+    }
+    
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    
+    body.modal-open {
+      overflow: hidden;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content-modal { padding: 10px; }
+      .modal-close-btn { top: 10px; left: 10px; width: 50px; height: 50px; font-size: 25px; }
+      .modal-close-btn::after { font-size: 14px; left: 55px; }
+    }
+    
+    @media (max-width: 480px) {
+      .modal-close-btn { width: 45px; height: 45px; font-size: 22px; }
+      .modal-close-btn::after { font-size: 12px; left: 50px; padding: 4px 8px; }
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-v7J1cWIBBM" once="menu" id="menu02-1o">
+    
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="index.html">
+              <img src="assets/images/logo2.0-v2-101x84.png" alt="Mobirise Website Builder" style="height: 3rem;">
+            </a>
+          </span>
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-info text-primary display-4" href="index.html">GET UNDERWAY</a></span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+              <a class="nav-link link text-info text-primary display-4" href="index.html#video02-1l">Intro</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link link text-info show text-primary display-4" href="index.html#gallery02-v" aria-expanded="false">Course Units</a>
+            </li><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="index.html#news08-1j">Extras</a></li></ul>
+          
+          <div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="index.html#gallery02-v"> Start now</a></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Background Video Section - FIXED AND WORKING -->
+  <section data-bs-version="5.1" class="header18 cid-v7xYZjStXZ" id="header18-1k">
+    <!-- Video Container -->
+    <div class="video-container">
+      <!-- HTML5 Video with all required attributes -->
+      <video id="background-video" autoplay muted loop playsinline 
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <source src="assets/videos/background-video.mp4" type="video/mp4">
+        <!-- Fallback message -->
+        Your browser does not support HTML5 video.
+      </video>
+      
+      <!-- Dark overlay for text readability -->
+      <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+    </div>
+    
+    <!-- Text content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-12">
+        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
+          <strong><br>Level 1</strong></h1>
+        
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Mission ready starts with being communication ready. Welcome to English Level 1.</p>
+        <div class="mbr-section-btn"><a class="btn btn-white-outline display-7" href="index.html#video02-1l">Learn More</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="video02 cid-v7yFbDAabb mbr-parallax-background" id="video02-1l">
+  
+  <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(0, 0, 0);"></div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Video con controls y sin autoplay -->
+      <div class="mbr-figure col-12 mb-5 col-md-9">
+        <video class="mbr-embedded-video" controls preload="metadata" style="width:100%; height:auto; max-width:100%; border-radius:8px;">
+          <source src="./assets/videos/Logo_Reveal03.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 content-text">
+        <h4 class="mbr-description mbr-fonts-style mb-3 align-center display-5">
+          <strong>Introduction: What you need to know</strong></h4>
+        <p class="mbr-description mbr-fonts-style mb-0 align-center display-7">
+        Introducción: Lo que necesitas saber</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="gallery1 mbr-gallery cid-tMlDYtQ5fF" id="gallery02-v">
+    
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 content-head">
+                <div class="mbr-section-head mb-5">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2"><strong>Course Units</strong></h3>
+                    <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Study this material in the proposed order to achieve desired results.</h4>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            /* Reducción del tamaño de las tarjetas (~20%) y efecto hover */
+            .gallery-image {
+                margin-bottom: 50px; /* Más espacio vertical entre tarjetas para evitar congestión */
+            }
+            .gallery-image .item-wrapper {
+                overflow: hidden;
+                transition: transform 0.4s ease;
+                transform: scale(0.8); /* Tarjetas al 80% del tamaño normal */
+                transform-origin: top center;
+            }
+            .gallery-image .item-wrapper:hover {
+                transform: scale(1); /* Al hover crecen al 100% (efecto pop suave) */
+            }
+            .gallery-image .item-wrapper img {
+                transition: transform 0.4s ease;
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .gallery-image .item-wrapper:hover img {
+                transform: scale(1.05); /* Pequeño zoom extra dentro de la tarjeta al hover */
+            }
+        </style>
+        
+        <div class="row mbr-gallery mbr-masonry" data-masonry="{&quot;percentPosition&quot;: true }">
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page1.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery03-1334x1333.jpg" alt="Course Unit 1">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page2.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery01-1334x1323.jpg" alt="Course Unit 2">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page3.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery13-1139x759.jpg" alt="Course Unit 3">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page6.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery02-1139x1137.jpg" alt="Course Unit 6">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page5.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery10-1139x1137.jpg" alt="Course Unit 5">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 item gallery-image">
+                <div class="item-wrapper">
+                    <a href="page4.html" class="d-block">
+                        <img class="w-100" src="assets/images/gallery06-1139x1140.jpg" alt="Course Unit 4">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="news08 cid-v7xcZIBuuI mbr-parallax-background" id="news08-1j">
+  
+  <div class="mbr-overlay"></div>
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 content-head">
+        <div class="mbr-section-head">
+          <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+            <strong>Extras</strong></h4>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      
+      <!-- Primer elemento: abre en modal -->
+      <div class="item features-image col-12 col-md-6 col-lg-4 active">
+        <div class="item-wrapper">
+          <div class="item-img mb-3">
+            <a href="./assets/content/FL1/index.html" onclick="openModal(this.href); return false;" style="cursor: pointer;">
+              <img src="assets/images/gallery08-816x995.jpg" alt="Extra 1" title="">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Segundo elemento: sin enlace (como original) -->
+      <div class="item features-image col-12 col-md-6 col-lg-4">
+        <div class="item-wrapper">
+          <div class="item-img mb-3">
+            <img src="assets/images/no20image-919x813.png" alt="Extra 2" title="">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tercer elemento: enlace normal (sin modal, como en el original) -->
+      <div class="item features-image col-12 col-md-6 col-lg-4">
+        <div class="item-wrapper">
+          <div class="item-img mb-3">
+            <a href="page7.html">
+              <img src="assets/images/imagen18-816x995.jpg" alt="Extra 3" title="">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-v7KcehQsMu" once="footers" id="footer04-1p">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2026 Armada Nacional de Colombia - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Container (solo para el primer elemento de Extras) -->
+<div id="contentModal" class="content-modal">
+  <div class="modal-content-container">
+    <button class="modal-close-btn" onclick="closeModal()" title="Close Window">×</button>
+    <iframe id="contentIframe" class="modal-iframe" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/2160556" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-builder.html">Free AI Website Software</a></section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="assets/parallax/jarallax.js"></script>  
+<script src="assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="assets/ytplayer/index.js"></script>  
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="assets/vimeoplayer/player.js"></script>  
+<script src="assets/playervimeo/vimeo_player.js"></script>  
+<script src="assets/masonry/masonry.pkgd.min.js"></script>  
+<script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>  
+<script src="assets/theme/js/script.js"></script>  
+<script src="assets/gallery/player.min.js"></script>  
+<script src="assets/gallery/script.js"></script>  
+
+<!-- Modal JavaScript (solo para el primer elemento de Extras) -->
+<script>
+  function openModal(url) {
+    document.getElementById('contentIframe').src = url;
+    document.getElementById('contentModal').style.display = 'block';
+    document.body.classList.add('modal-open');
+    
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', handleEscape);
+    // Cerrar al hacer clic fuera del contenido
+    document.getElementById('contentModal').addEventListener('click', closeOnOutside);
+  }
+  
+  function closeModal() {
+    document.getElementById('contentModal').style.display = 'none';
+    document.getElementById('contentIframe').src = '';
+    document.body.classList.remove('modal-open');
+    
+    document.removeEventListener('keydown', handleEscape);
+    document.getElementById('contentModal').removeEventListener('click', closeOnOutside);
+  }
+  
+  function handleEscape(e) {
+    if (e.key === 'Escape') closeModal();
+  }
+  
+  function closeOnOutside(e) {
+    if (e.target.id === 'contentModal') closeModal();
+  }
+</script>
+  
+  <input name="animation" type="hidden">
+  </body>
+</html>

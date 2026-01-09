@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+  <!-- Site made with Mobirise Website Builder v6.0.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.0.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo2.0-v2-101x84.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Unit 1</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=kPrVDf"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=kPrVDf" type="text/css">
+
+  
+  
+  
+<meta name="theme-color" content="#2b7a69">
+<link rel="manifest" href="manifest.json">
+<script src="sw-connect.js"></script>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-640x1136.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-750x1334.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1242x2208.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="assets/images/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1536x2048.png">
+<link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-1668x2224.png">
+<link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="assets/images/apple-launch-2048x2732.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="GULevel1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Font Awesome for progress widget icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  
+  <style>
+  /* Modal Styles */
+  .content-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10000;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .modal-content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease;
+  }
+  
+  .modal-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .modal-close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  .modal-close-btn:hover {
+    background: #c82333;
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  }
+  
+  .modal-close-btn:active {
+    transform: scale(0.95);
+  }
+  
+  .modal-close-btn::after {
+    content: 'Close';
+    position: absolute;
+    left: 70px;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  
+  .modal-close-btn:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  body.modal-open {
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .content-modal {
+      padding: 10px;
+    }
+    
+    .modal-close-btn {
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+    }
+    
+    .modal-close-btn::after {
+      font-size: 14px;
+      left: 55px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-close-btn {
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+    }
+    
+    .modal-close-btn::after {
+      font-size: 12px;
+      left: 50px;
+      padding: 4px 8px;
+    }
+  }
+  
+      /* === FLOATING PROGRESS WIDGET - OPCIÓN 3: PILL ULTRA-COMPACTO === */
+  .floating-progress {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .floating-progress.visible {
+    display: block;
+    opacity: 1;
+  }
+
+  .progress-section {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 18px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+  }
+
+  /* Círculo de progreso mini */
+  .progress-circle {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .progress-circle svg {
+    transform: rotate(-90deg);
+    width: 40px;
+    height: 40px;
+  }
+
+  .progress-circle circle {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s ease;
+  }
+
+  .progress-circle .bg-circle {
+    stroke: #e0e0e0;
+  }
+
+  .progress-circle .progress-ring {
+    stroke: url(#gradient);
+  }
+
+  /* Información del progreso */
+  .progress-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 45px;
+  }
+
+  .progress-text-desktop {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+  }
+
+  .progress-label {
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+  }
+
+  /* Botón reset circular */
+  .reset-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .reset-btn:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 2px 10px rgba(102, 126, 234, 0.5);
+  }
+
+  .reset-btn:active {
+    transform: rotate(180deg) scale(0.95);
+  }
+
+  /* Ocultar elementos no usados en desktop */
+  .progress-bar-container {
+    display: none;
+  }
+  
+  .progress-text-mobile {
+    display: none;
+  }
+
+  /* === RESPONSIVE MOBILE === */
+  @media (max-width: 768px) {
+    .floating-progress {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      transform: none;
+      border-radius: 0;
+      padding: 0;
+      display: none;
+      opacity: 0;
+    }
+    
+    .floating-progress.visible {
+      display: block;
+      opacity: 1;
+    }
+    
+    .progress-section {
+      background: rgba(10, 35, 66, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 0;
+      padding: 15px 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      border: none;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Ocultar círculo en móvil */
+    .progress-circle {
+      display: none;
+    }
+    
+    /* Mostrar barra de progreso en móvil */
+    .progress-bar-container {
+      display: block;
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 4px;
+      transition: width 0.5s ease;
+      width: 0%;
+      box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+    }
+    
+    /* Ajustar información para móvil */
+    .progress-info {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      min-width: auto;
+    }
+    
+    .progress-text-desktop {
+      display: none;
+    }
+    
+    .progress-text-mobile {
+      display: block;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-family: 'Montserrat', 'Roboto', sans-serif;
+    }
+    
+    .progress-label {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 11px;
+    }
+    
+    /* Botón reset en móvil */
+    .reset-btn {
+      background: rgba(255, 255, 255, 0.2);
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+    }
+    
+    .reset-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(180deg) scale(1.05);
+    }
+  }
+
+  </style>
+</head>
+<body>
+  
+  <!-- Modal Container -->
+  <div id="contentModal" class="content-modal">
+    <div class="modal-content-container">
+      <button class="modal-close-btn" onclick="closeModal()" title="Close Window">✕</button>
+      <iframe id="contentIframe" class="modal-iframe" src=""></iframe>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING PROGRESS INDICATOR - OPCIÓN 3 ===== -->
+  <div class="floating-progress">
+    <div class="progress-section">
+      <div class="progress-circle">
+        <svg width="40" height="40">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle class="bg-circle" cx="20" cy="20" r="17" stroke-dasharray="106.814" stroke-dashoffset="0"></circle>
+          <circle class="progress-ring" cx="20" cy="20" r="17" 
+                  stroke-dasharray="106.814" stroke-dashoffset="106.814" 
+                  id="progressRing"></circle>
+        </svg>
+      </div>
+      <div class="progress-info">
+        <div class="progress-text-desktop" id="desktopProgressText">0%</div>
+        <div class="progress-label">Progress</div>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+      <span class="progress-text-mobile" id="mobileProgressText">0%</span>
+      <button id="reset-progress" class="reset-btn" title="Reset Progress">
+        <i class="fas fa-redo"></i>
+      </button>
+    </div>
+  </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBarFill"></div>
+      </div>
+      <span class="progress-text-mobile" id="mobileProgressText">0%</span>
+      <div class="progress-label">
+        <i class="fas fa-graduation-cap"></i> Progress
+      </div>
+      <button id="reset-progress" class="reset-btn">Reset</button>
+    </div>
+  </div>
+
+  <section data-bs-version="5.1" class="menu menu2 cid-v7KfodDuB8" once="menu" id="menu02-1v">
+	
+
+	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+		<div class="container">
+			<div class="navbar-brand">
+				<span class="navbar-logo">
+					<a href="index.html">
+						<img src="assets/images/logo2.0-v2-101x84.png" alt="Mobirise Website Builder" style="height: 3rem;">
+					</a>
+				</span>
+				<span class="navbar-caption-wrap"><a class="navbar-caption text-info text-primary display-4" href="index.html">GET UNDERWAY</a></span>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+						<a class="nav-link link text-info text-primary display-4" href="index.html#video02-1l">Intro</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link link text-info show text-primary display-4" href="index.html#gallery02-v" aria-expanded="false">Course Units</a>
+					</li><li class="nav-item"><a class="nav-link link text-info text-primary display-4" href="index.html#news08-1j">Extras</a></li></ul>
+				
+				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-info display-4" href="index.html#gallery02-v"> Start now</a></div>
+			</div>
+		</div>
+	</nav>
+</section>
+
+<section data-bs-version="5.1" class="header16 cid-v7Kfoe3Bh6" id="header16-1w">
+  
+
+  
+  
+
+  <div class="text-center container">
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-lg-10">
+        <div class="image-wrap">
+          <img src="assets/images/arc-7254-2136x1426.jpeg" alt="Mobirise Website Builder">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-9">
+        <h2 class="mbr-section-title mbr-fonts-style mt-4 display-2"><strong>Unit 4: Travel and Logisticcs</strong></h2>
+        <p class="mbr-text mbr-fonts-style mt-4 display-7"><strong>Objective: </strong>Can understand simple directions and describe daily activities.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="features4 cid-v7KfoesLFl" id="features04-22">
+	
+	<div class="mbr-overlay"></div>
+	<div class="container">
+		<div class="mbr-section-head mb-5">
+			<h4 class="mbr-section-title mbr-fonts-style align-left mb-3 display-2"><strong>Content</strong></h4>
+			
+			
+		</div>
+		<div class="row">
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/pexels-lilartsy-1394646-816x1224.jpg" alt="Mobirise Website Builder">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5"><strong>U4. Study</strong></h5>
+						
+						<p class="mbr-text mbr-fonts-style display-7">
+							Study key vocabulary, practice and improve your pronunciation.</p>
+						<div class="mbr-section-btn item-footer">
+							<a href="./assets/content/VL1U4/index.html" class="btn item-btn btn-info display-7" onclick="openModal(this.href, 0); return false;">Learn vocab</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/pexels-julia-khalimova-826746-3922575-816x544.jpg" alt="Mobirise Website Builder">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5">
+							<strong>U4. Build</strong></h5>
+						
+						<p class="mbr-text mbr-fonts-style display-7">
+							Learn how to structure your ideas and express them correctly.
+						</p>
+						<div class="mbr-section-btn item-footer">
+							<a href="./assets/content/GL1U4/index.html" class="btn item-btn btn-info display-7" onclick="openModal(this.href, 1); return false;">Structure ideas</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item features-image col-12 col-md-6 col-lg-4">
+				<div class="item-wrapper">
+					<div class="item-img">
+						<img src="assets/images/understand-480x269.jpg" alt="Mobirise Website Builder">
+					</div>
+					<div class="item-content">
+						<h5 class="item-title mbr-fonts-style display-5">
+							<strong>U4. Understand</strong></h5>
+						
+						<p class="mbr-text mbr-fonts-style display-7">
+							See everything in context, listen, practice and prepare yourself for international exams.<br>
+						</p>
+						<div class="mbr-section-btn item-footer">
+							<a href="./assets/content/RL1U4/index.html" class="btn item-btn btn-info display-7" onclick="openModal(this.href, 2); return false;">Read &amp; Listen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-v7KfofauKG" once="footers" id="footer04-1z">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                     Copyright 2026 Armada Nacional de Colombia - All Rights Reserved
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/smoothscroll/smooth-scroll.js"></script>
+<script src="assets/ytplayer/index.js"></script>
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="assets/theme/js/script.js"></script>
+  
+<!-- Modal and Progress JavaScript -->
+<script>
+// Variables globales para el progreso
+let clickedCards = new Set();
+
+// Definir los valores de cada tarjeta: 0 = 30%, 1 = 30%, 2 = 40%
+const cardValues = [30, 30, 40];
+
+// Referencias a elementos del DOM del progreso
+const progressRing = document.getElementById('progressRing');
+const desktopText = document.getElementById('desktopProgressText');
+const mobileText = document.getElementById('mobileProgressText');
+const progressBarFill = document.getElementById('progressBarFill');
+const resetBtn = document.getElementById('reset-progress');
+const progressWidget = document.querySelector('.floating-progress');
+
+// Configuración del círculo
+const circumference = 2 * Math.PI * 17; // 106.814
+
+// Función para calcular el progreso total
+function calculateTotalProgress() {
+  let total = 0;
+  clickedCards.forEach(cardIndex => {
+    if (cardValues[cardIndex]) {
+      total += cardValues[cardIndex];
+    }
+  });
+  return Math.min(total, 100);
+}
+
+// Función para actualizar el progreso
+function updateProgress() {
+  const percentage = calculateTotalProgress();
+  const roundedPercentage = Math.round(percentage);
+  
+  // Actualizar textos
+  desktopText.textContent = `${roundedPercentage}%`;
+  mobileText.textContent = `${roundedPercentage}%`;
+  
+  // Actualizar círculo (desktop)
+  const offset = circumference - (percentage / 100) * circumference;
+  if (progressRing) {
+    progressRing.style.strokeDashoffset = offset;
+  }
+  
+  // Actualizar barra (mobile)
+  if (progressBarFill) {
+    progressBarFill.style.width = `${percentage}%`;
+  }
+}
+
+// Función para registrar que se hizo clic en una tarjeta
+function registerCardClick(cardIndex) {
+  if (!clickedCards.has(cardIndex)) {
+    clickedCards.add(cardIndex);
+    updateProgress();
+  }
+}
+
+function openModal(url, cardIndex) {
+  // Registrar que se hizo clic en la tarjeta
+  registerCardClick(cardIndex);
+  
+  // Set the iframe source to the clicked URL
+  document.getElementById('contentIframe').src = url;
+  
+  // Show the modal
+  document.getElementById('contentModal').style.display = 'block';
+  
+  // Prevent body scrolling
+  document.body.classList.add('modal-open');
+  
+  // Add event listener for Escape key
+  document.addEventListener('keydown', handleEscapeKey);
+  
+  // Add event listener to close modal when clicking outside content
+  document.getElementById('contentModal').addEventListener('click', closeModalOnOutsideClick);
+  
+  // Focus the close button for better accessibility
+  setTimeout(() => {
+    document.querySelector('.modal-close-btn').focus();
+  }, 100);
+}
+
+function closeModal() {
+  // Hide the modal
+  document.getElementById('contentModal').style.display = 'none';
+  
+  // Clear the iframe source to stop any playing media
+  document.getElementById('contentIframe').src = '';
+  
+  // Re-enable body scrolling
+  document.body.classList.remove('modal-open');
+  
+  // Remove event listeners
+  document.removeEventListener('keydown', handleEscapeKey);
+  document.getElementById('contentModal').removeEventListener('click', closeModalOnOutsideClick);
+}
+
+function handleEscapeKey(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+function closeModalOnOutsideClick(event) {
+  if (event.target.id === 'contentModal') {
+    closeModal();
+  }
+}
+
+// Función para verificar si el widget debe mostrarse
+function checkWidgetVisibility() {
+  const featuresSection = document.getElementById('features04-22');
+  if (!featuresSection || !progressWidget) return;
+  
+  const sectionRect = featuresSection.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  
+  const visibilityThreshold = 0.25 * windowHeight;
+  
+  const isSectionVisible = 
+    sectionRect.top < windowHeight - visibilityThreshold && 
+    sectionRect.bottom > visibilityThreshold;
+  
+  const isAtTop = window.scrollY < 100;
+  
+  if (isSectionVisible && !isAtTop) {
+    progressWidget.classList.add('visible');
+  } else {
+    progressWidget.classList.remove('visible');
+  }
+}
+
+// Funcionalidad del progress widget
+let scrollTimeout;
+function handleScroll() {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(function() {
+    checkWidgetVisibility();
+  }, 50);
+}
+
+// Inicializar
+document.addEventListener('DOMContentLoaded', function() {
+  updateProgress();
+  
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      clickedCards.clear();
+      updateProgress();
+    });
+  }
+  
+  checkWidgetVisibility();
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', checkWidgetVisibility);
+});
+</script>
+  
+<input name="animation" type="hidden">
+</body>
+</html>
