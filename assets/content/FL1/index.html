@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maritime English - Communication Functions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Navigation and Progress -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="title-section">
+                    <h1 class="main-title">Communication Functions</h1>
+                    <p class="subtitle">Essential Maritime English communication skills</p>
+                </div>
+                <nav class="navigation-bar">
+                    <button id="study-nav-btn" class="nav-btn active">
+                        <i class="fas fa-book-open"></i>
+                        <span>Study Mode</span>
+                    </button>
+                    <button id="practice-nav-btn" class="nav-btn">
+                        <i class="fas fa-microphone"></i>
+                        <span>Practice Mode</span>
+                    </button>
+                </nav>
+                <div class="progress-container">
+                    <svg class="progress-ring" width="120" height="120">
+                        <circle class="progress-ring-circle-bg" cx="60" cy="60" r="52"></circle>
+                        <circle class="progress-ring-circle" cx="60" cy="60" r="52"></circle>
+                    </svg>
+                    <div class="progress-text">
+                        <span class="progress-percentage">0%</span>
+                        <span class="progress-label">Complete</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Progress Bar -->
+        <div class="mobile-progress-bar">
+            <div class="mobile-progress-fill"></div>
+            <span class="mobile-progress-text">0%</span>
+        </div>
+
+        <!-- STUDY MODE SECTION -->
+        <section id="study-section" class="mode-section active">
+            <div class="controls-bar">
+                <button id="expand-all-btn" class="control-btn">
+                    <i class="fas fa-chevron-down"></i>
+                    <span>Expand All</span>
+                </button>
+                <button id="collapse-all-btn" class="control-btn">
+                    <i class="fas fa-chevron-up"></i>
+                    <span>Collapse All</span>
+                </button>
+            </div>
+
+            <div class="function-sections">
+                <!-- Function 1 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-handshake"></i>
+                            <span>Introducing yourself and others; Asking for/giving basic personal information; Greetings</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-user"></i> Introducing Yourself</h4>
+                            <p class="example-text">Hello, I'm the new chief officer.</p>
+                            <p class="example-text">My name is Officer Lee, and I'll be joining your watch.</p>
+                            <p class="example-text">I'm pleased to meet you all.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-users"></i> Introducing Others</h4>
+                            <p class="example-text">This is our chief engineer.</p>
+                            <p class="example-text">Let me introduce the navigation officer.</p>
+                            <p class="example-text">I'd like you to meet the new crew member.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-id-card"></i> Asking for Personal Information</h4>
+                            <p class="example-text">What's your name and rank?</p>
+                            <p class="example-text">Where are you from?</p>
+                            <p class="example-text">How long have you been at sea?</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-hand-wave"></i> Greetings</h4>
+                            <p class="example-text">Good morning! How are you doing today?</p>
+                            <p class="example-text">Hi there! Everything okay?</p>
+                            <p class="example-text">Hello! How's your watch going?</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Function 2 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-clock"></i>
+                            <span>Talking about daily work and leisure activities; Telling the time</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-briefcase"></i> Daily Work Activities</h4>
+                            <p class="example-text">I start my watch at eight hundred hours.</p>
+                            <p class="example-text">We need to check the cargo securing.</p>
+                            <p class="example-text">I'm responsible for the bridge watch.</p>
+                            <p class="example-text">My duties include checking the navigation equipment.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-gamepad"></i> Leisure Activities</h4>
+                            <p class="example-text">During my free time, I usually read or exercise.</p>
+                            <p class="example-text">I like to watch movies in the evening.</p>
+                            <p class="example-text">We sometimes play cards in the crew mess.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-clock"></i> Telling the Time</h4>
+                            <p class="example-text">It's eight thirty in the morning.</p>
+                            <p class="example-text">The meeting starts at fourteen hundred hours.</p>
+                            <p class="example-text">We'll arrive around midnight.</p>
+                            <p class="example-text">My watch begins at zero four hundred.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Function 3 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-phone"></i>
+                            <span>Telephoning; Giving/receiving simple instructions; Solving minor problems</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-phone-volume"></i> Telephoning</h4>
+                            <p class="example-text">Could I speak to the chief officer, please?</p>
+                            <p class="example-text">This is the bridge calling the engine room.</p>
+                            <p class="example-text">Can you put me through to the captain?</p>
+                            <p class="example-text">I'll call you back in five minutes.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-list-check"></i> Giving Instructions</h4>
+                            <p class="example-text">Please check the oil pressure gauge.</p>
+                            <p class="example-text">Make sure all the hatches are secured.</p>
+                            <p class="example-text">Monitor the weather forecast closely.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-wrench"></i> Solving Minor Problems</h4>
+                            <p class="example-text">Understood. I'll do that right away.</p>
+                            <p class="example-text">I'll take care of it immediately.</p>
+                            <p class="example-text">Let me fix that for you.</p>
+                            <p class="example-text">I can handle this problem.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Function 4 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-calendar-days"></i>
+                            <span>Making arrangements; Booking transport or berths; Discussing travel details</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-calendar-check"></i> Making Arrangements</h4>
+                            <p class="example-text">Can we schedule a meeting for tomorrow afternoon?</p>
+                            <p class="example-text">Let's arrange the cargo inspection for next Monday.</p>
+                            <p class="example-text">I'll organize the crew briefing.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-bed"></i> Booking Transport or Berths</h4>
+                            <p class="example-text">I would like to book a berth for three crew members.</p>
+                            <p class="example-text">We need to reserve transport to the airport.</p>
+                            <p class="example-text">Can you arrange accommodation for the pilots?</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-map-location-dot"></i> Discussing Travel Details</h4>
+                            <p class="example-text">Our estimated arrival time is sixteen hundred hours.</p>
+                            <p class="example-text">The vessel will depart at dawn.</p>
+                            <p class="example-text">We're scheduled to reach port on Tuesday.</p>
+                            <p class="example-text">The journey takes approximately three days.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Function 5 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-utensils"></i>
+                            <span>Ordering food; Making decisions in a group; Talking about likes/dislikes</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-bowl-food"></i> Ordering Food</h4>
+                            <p class="example-text">I'll have the grilled chicken, please.</p>
+                            <p class="example-text">Could I get a vegetarian option?</p>
+                            <p class="example-text">I'd like some coffee with breakfast.</p>
+                            <p class="example-text">What's the special today?</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-people-group"></i> Making Group Decisions</h4>
+                            <p class="example-text">What do you think about this plan?</p>
+                            <p class="example-text">Let's vote on the best option.</p>
+                            <p class="example-text">Does everyone agree with this approach?</p>
+                            <p class="example-text">We should consider all the alternatives.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-heart"></i> Talking about Likes</h4>
+                            <p class="example-text">I really enjoy working on deck.</p>
+                            <p class="example-text">I love the night watch because it's peaceful.</p>
+                            <p class="example-text">I prefer working in calm seas.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-heart-crack"></i> Talking about Dislikes</h4>
+                            <p class="example-text">I'm not fond of rough weather.</p>
+                            <p class="example-text">I don't really like working in the engine room heat.</p>
+                            <p class="example-text">Heavy seas make the work more difficult.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Function 6 -->
+                <details class="function-card">
+                    <summary class="function-header">
+                        <div class="function-title">
+                            <i class="fas fa-headset"></i>
+                            <span>Describing services; Making simple complaints; Requesting assistance</span>
+                        </div>
+                        <i class="fas fa-chevron-down collapse-icon"></i>
+                    </summary>
+                    <div class="function-content">
+                        <div class="example-group">
+                            <h4><i class="fas fa-bell-concierge"></i> Describing Services</h4>
+                            <p class="example-text">We provide twenty-four hour medical assistance on board.</p>
+                            <p class="example-text">Laundry service is available every Tuesday.</p>
+                            <p class="example-text">The mess is open from six to twenty hundred hours.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-comment-dots"></i> Making Simple Complaints</h4>
+                            <p class="example-text">Excuse me, the air conditioning isn't working properly.</p>
+                            <p class="example-text">I'm afraid there's a problem with my cabin light.</p>
+                            <p class="example-text">The water pressure seems quite low.</p>
+                        </div>
+                        <div class="example-group">
+                            <h4><i class="fas fa-hands-helping"></i> Requesting Assistance</h4>
+                            <p class="example-text">Could you help me with this, please?</p>
+                            <p class="example-text">I need some assistance with the equipment.</p>
+                            <p class="example-text">Would you mind giving me a hand?</p>
+                            <p class="example-text">Can someone help me carry these supplies?</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- PRACTICE MODE SECTION -->
+        <section id="practice-section" class="mode-section">
+            <h2 class="section-title">
+                <i class="fas fa-microphone"></i>
+                Pronunciation Practice
+            </h2>
+            <p class="section-description">
+                Listen to each phrase and practice your pronunciation. Click "Record" and speak clearly.
+            </p>
+
+            <!-- Microphone Permission Notice -->
+            <div id="mic-notice" class="mic-notice">
+                <i class="fas fa-microphone-slash"></i>
+                <p>Please enable microphone access to practice pronunciation.</p>
+                <button id="enable-mic-btn" class="enable-mic-btn">
+                    <i class="fas fa-microphone"></i>
+                    Enable Microphone
+                </button>
+            </div>
+
+            <!-- Practice Cards Container (populated by JavaScript) -->
+            <div id="practice-cards-container" class="practice-cards hidden"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

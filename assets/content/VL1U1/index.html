@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 - Unit 1: Meeting the Crew</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen">
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- ===== STUDY MODE SECTION ===== -->
+        <section id="study-section" class="max-w-4xl mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-2"><i class="fas fa-book-open"></i> Vocabulary Explorer</h1>
+            <p class="text-center text-gray-600 mb-8">Level 1 - Unit 1</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Your Vocabulary Deck</h2>
+                        <span id="study-part-indicator" class="text-sm text-gray-500"></span>
+                    </div>
+                    <div id="vocab-container" class="space-y-4"></div>
+                    <button id="load-more-study" class="w-full mt-4 py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition hidden">
+                        <i class="fas fa-plus-circle mr-2"></i>Load More Words
+                    </button>
+                </div>
+                <div id="word-details-panel" class="bg-white rounded-xl shadow-md p-6 flex-col sticky top-32 max-h-[calc(100vh-8rem)] hidden md:flex">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">Word Details</h2>
+                    <div id="word-details" class="flex-1 min-h-[300px] overflow-y-auto">
+                        <p class="text-gray-500">Select a word to see its details</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SPEECH PRACTICE MODE SECTION ===== -->
+        <section id="practice-section" class="max-w-4xl mx-auto hidden">
+            <h1 class="text-4xl font-bold text-center mb-2"><i class="fas fa-microphone-alt"></i> Practice Mode</h1>
+            <p class="text-center text-gray-600 mb-8">Practice your pronunciation</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-xl shadow-md p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold text-gray-800">Practice Words</h2>
+                        <span id="practice-part-indicator" class="text-sm text-gray-500"></span>
+                    </div>
+                    <div id="practice-vocab-container" class="space-y-4"></div>
+                    <button id="load-more-practice" class="w-full mt-4 py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition hidden">
+                        <i class="fas fa-plus-circle mr-2"></i>Load More Words
+                    </button>
+                </div>
+                <div id="practice-panel-desktop-container" class="hidden md:block">
+                    <div id="practice-details-panel" class="bg-white rounded-xl shadow-md p-6 flex flex-col sticky top-32 max-h-[calc(100vh-8rem)]">
+                        <h2 class="text-xl font-semibold mb-4 text-gray-800">Pronunciation Target</h2>
+                        <div id="speech-details" class="flex-1 min-h-[300px] overflow-y-auto flex flex-col">
+                             <div id="target-section">
+                                <div class="flex justify-between items-center mb-4">
+                                    <h3 id="targetPhrase" class="text-3xl font-bold text-indigo-700">Select a word</h3>
+                                    <i id="playTargetSoundBtn" class="fas fa-volume-up sound-icon large-sound-icon hidden"></i>
+                                </div>
+                            </div>
+                            <div class="permission-section" id="permissionSection">
+                                 <h3><i class="fas fa-microphone-alt"></i> Mic Access Required</h3>
+                                 <p>Click the microphone button to grant permission.</p>
+                            </div>
+                            
+                            <div id="result" class="result-box">Your result will appear here.</div>
+    
+                            <div class="controls mt-4 flex-grow flex flex-col items-center justify-center">
+                                <button id="micBtn" class="btn-mic" disabled>
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Start Recording</span>
+                                </button>
+                            </div>
+                            <div id="status" class="status-box">Select a word to start practicing.</div>
+                            <div class="transcript mt-4">
+                                <h3><i class="fas fa-comment-dots"></i> Transcript:</h3>
+                                <p id="transcriptText">No speech detected yet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== QUIZ MODE SECTION ===== -->
+        <section id="quiz-section" class="max-w-4xl mx-auto hidden">
+            <h1 class="text-4xl font-bold text-center mb-2"><i class="fas fa-question-circle"></i> Quiz Mode</h1>
+            <p class="text-center text-gray-600 mb-8">Test Your Vocabulary Knowledge</p>
+            <div id="quiz-container" class="bg-white rounded-xl shadow-md p-6">
+                <p id="question-counter" class="text-center text-gray-500 mb-2 font-semibold"></p>
+                <p id="question-text" class="text-xl font-bold text-center mb-6"></p>
+                <div id="options-container" class="space-y-3"></div>
+                <div id="feedback" class="mt-4 font-semibold text-center h-6"></div>
+                <button id="next-question-btn" class="btn-primary mt-4 w-full md:w-auto md:float-right hidden">Next Question</button>
+            </div>
+            <div id="quiz-results" class="bg-white rounded-xl shadow-md p-6 text-center hidden">
+                <h2 class="text-2xl font-bold mb-4">Quiz Complete!</h2>
+                <p class="text-lg">You scored <span id="score-display" class="font-bold"></span> out of <span id="total-questions-display" class="font-bold"></span>.</p>
+                <button id="restart-quiz-btn" class="btn-primary mt-6">Restart Quiz</button>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ===== MOBILE MODALS ===== -->
+    <div id="mobile-details-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-details-modal-btn" class="modal-close-btn">&times;</button>
+            <div id="mobile-word-details"></div>
+        </div>
+    </div>
+    <div id="mobile-practice-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <button id="close-practice-modal-btn" class="modal-close-btn">&times;</button>
+            <div id="mobile-practice-content"></div>
+        </div>
+    </div>
+
+    <!-- ===== FLOATING PROGRESS INDICATOR ===== -->
+    <div class="floating-progress">
+        <div class="progress-section">
+            <div class="progress-circle hidden md:block">
+                <svg>
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="bg-circle" cx="60" cy="60" r="54"></circle>
+                    <circle class="progress-ring" cx="60" cy="60" r="54" stroke-dasharray="339.292" stroke-dashoffset="339.292" id="progressRing"></circle>
+                </svg>
+                <div class="progress-text-desktop" id="desktopProgressText">0%</div>
+            </div>
+            <div class="progress-bar-container block md:hidden">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+            <span class="progress-text-mobile block md:hidden" id="mobileProgressText">0%</span>
+            <div class="progress-label hidden md:block"><i class="fas fa-graduation-cap"></i> Progress</div>
+            <button id="reset-progress" class="reset-btn">Reset</button>
+        </div>
+    </div>
+    
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="bottom-nav">
+        <button id="study-mode-btn" class="nav-btn active">
+            <i class="fas fa-book-open"></i><span>Study</span>
+        </button>
+        <button id="practice-mode-btn" class="nav-btn">
+            <i class="fas fa-microphone-alt"></i><span>Practice</span>
+        </button>
+        <button id="quiz-mode-btn" class="nav-btn">
+            <i class="fas fa-question-circle"></i><span>Quiz</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>

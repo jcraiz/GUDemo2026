@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting the Crew</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-badge"><i class="fas fa-anchor"></i></div>
+        <h1><i class="fas fa-book-reader"></i> Meeting the Crew</h1>
+        <p class="subtitle">Level 1 - Unit 1</p>
+        <div class="unit-info">
+            <span class="badge"><i class="fas fa-signal"></i> Level 1</span>
+            <span class="badge"><i class="fas fa-clock"></i> 45 min</span>
+            <span class="badge"><i class="fas fa-certificate"></i> Foundation</span>
+        </div>
+        <div class="control-panel">
+            <div class="audio-player-wrapper">
+                <button class="audio-control-btn" id="playBtn"><i class="fas fa-play"></i></button>
+                <div class="audio-track-info">
+                    <span class="track-label">AUDIO TRACK</span>
+                    <div class="range-container"><input type="range" class="audio-seek" id="seekBar" min="0" max="100" value="0"></div>
+                    <div class="audio-time"><span id="currentTime">0:00</span> / <span id="duration">0:00</span></div>
+                </div>
+                <audio id="audioPlayer" src="sound/reading.mp3"></audio>
+            </div>
+            <div class="mode-buttons">
+                <button class="btn-mode active" data-mode="study"><i class="fas fa-book-open"></i> Study</button>
+                <button class="btn-mode" data-mode="practice"><i class="fas fa-dumbbell"></i> Practice</button>
+                <button class="btn-mode" data-mode="quiz"><i class="fas fa-tasks"></i> Quiz</button>
+            </div>
+        </div>
+        <section id="view-study" class="view-section active">
+            <div class="content-box">
+                <div class="section-header"><i class="fas fa-graduation-cap"></i><h3>Study Text</h3></div>
+                <div class="instruction-box"><i class="fas fa-info-circle"></i> Read carefully. Click highlighted words for translations.</div>
+                <div class="reading-image-container" id="readingImageContainer">
+                    <img src="image/reading_img.jpg" alt="Reading Reference" class="reading-reference-image" id="readingImage">
+                </div>
+                <div class="reading-content" id="sourceText"><div class="reading-line"><span class="vocab-highlight" data-key="meeting"><strong>Meeting</span> the Crew</strong></div>
+<div class="reading-line">Hello! My name is Luis. I <span class="vocab-highlight" data-key="meet">meet</span> my <span class="vocab-highlight" data-key="new partner">new partner</span> at a <span class="vocab-highlight" data-key="meeting">meeting</span> on the <span class="vocab-highlight" data-key="ship">ship</span>. I <span class="vocab-highlight" data-key="introduce myself">introduce myself</span> and say I am from Colombia, my <span class="vocab-highlight" data-key="country">country</span>. I am 22 years old; my <span class="vocab-highlight" data-key="age">age</span> is 22. My <span class="vocab-highlight" data-key="job">job</span> is a <span class="vocab-highlight" data-key="sailor">sailor</span>; I am a <span class="vocab-highlight" data-key="sailor">sailor</span>. People call me Luis. I <span class="vocab-highlight" data-key="ask a question">ask a question</span>: What is your name? I want to know you better. I ask another question and say my partner can <span class="vocab-highlight" data-key="speak english">speak English</span>. We speak a new language together. It is a personal <span class="vocab-highlight" data-key="meeting">meeting</span>, and I say I am <span class="vocab-highlight" data-key="happy to meet you">happy to meet you</span> and learn this language.</div>
+</div>
+            </div>
+        </section>
+        <section id="view-practice" class="view-section">
+            <div class="content-box practice-theme">
+                <div class="section-header"><i class="fas fa-headphones"></i><h3>Listening Practice</h3></div>
+                <div class="instruction-box"><i class="fas fa-pen-fancy"></i> Listen to the audio and select the missing words.</div>
+                <div class="practice-container">
+                    <div class="reading-content" id="practiceContainer"></div>
+                    <div class="action-buttons">
+                        <button class="btn-primary" id="checkPracticeBtn"><i class="fas fa-check-circle"></i> Check Answers</button>
+                        <button class="btn-control" id="resetPracticeBtn"><i class="fas fa-redo"></i> Try Again</button>
+                    </div>
+                    <div id="practiceFeedback" class="feedback-box" style="display:none;"></div>
+                </div>
+            </div>
+        </section>
+        <section id="view-quiz" class="view-section">
+            <div class="quiz-layout">
+                <div class="quiz-reference">
+                    <button class="accordion-toggle" id="mobileTextToggle"><span><i class="fas fa-file-alt"></i> Reference Text</span><i class="fas fa-chevron-down arrow"></i></button>
+                    <div class="quiz-panel-header"><i class="fas fa-file-alt"></i> Reference Text</div>
+                    <div class="reference-content" id="quizTextContent"></div>
+                </div>
+                <div class="quiz-questions-panel">
+                    <div class="section-header"><i class="fas fa-clipboard-question"></i><h3>Comprehension Quiz</h3><span class="score-badge" id="quizScore">0/10</span></div>
+                    <div id="questionsContainer"></div>
+                    <div class="action-buttons">
+                        <button class="btn-primary" id="submitQuizBtn"><i class="fas fa-paper-plane"></i> Submit Quiz</button>
+                        <button class="btn-primary" id="resetQuizBtn" style="display:none;"><i class="fas fa-redo"></i> Try Again</button>
+                    </div>
+                    <div id="quizResults" class="results-panel" style="display:none;"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="floating-progress">
+        <div class="progress-circle-desktop">
+            <svg viewBox="0 0 120 120">
+                <defs><linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FFD700;stop-opacity:1"/><stop offset="100%" style="stop-color:#FFD700;stop-opacity:0.8"/></linearGradient></defs>
+                <circle class="bg-circle" cx="60" cy="60" r="54"></circle>
+                <circle class="progress-ring" cx="60" cy="60" r="54" stroke-dasharray="339.292" stroke-dashoffset="339.292" id="progressRing"></circle>
+            </svg>
+            <div class="progress-text-desktop" id="desktopProgressText">0%</div>
+        </div>
+        <div class="progress-label-desktop"><i class="fas fa-chart-line"></i> <span id="progressLabel">Progress</span></div>
+        <div class="progress-bar-mobile">
+            <div class="progress-info"><i class="fas fa-chart-line"></i> <span class="progress-text-mobile" id="mobileProgressText">0%</span></div>
+            <div class="progress-bar-container"><div class="progress-bar-fill" id="progressBarFill"></div></div>
+        </div>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
